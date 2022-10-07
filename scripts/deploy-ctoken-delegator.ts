@@ -12,10 +12,10 @@ const CTOKEN_DECIMALS = 8;
 
 // CToken Params
 const params = {
-  underlying: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  underlying: "0x8A496486f4c7CB840555Bc2Be327CBA1447027C3",
   irModel: "0xa48a69D8CcDB88AC97b49C6a3F06b62f68d1BF35",
-  name: "PaperDAO Wrapped ETHW",
-  symbol: "pWETHW",
+  name: "PaperDAO Tether USD",
+  symbol: "pUSDT",
   decimals: CTOKEN_DECIMALS,
   unitrollerAddr: deployments.Unitroller,
   implementation: delegate,
