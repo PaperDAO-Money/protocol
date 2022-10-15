@@ -1,7 +1,7 @@
 import hre, { ethers } from "hardhat";
 import { readFileSync, writeFileSync } from "fs";
 import { numToWei } from "../utils/utils";
-import { verifyContract } from "./common/verify-contract";
+// import { verifyContract } from "./common/verify-contract";
 
 const outputFilePath = `./deployments/${hre.network.name}.json`;
 const deployments = JSON.parse(readFileSync(outputFilePath, "utf-8"));
@@ -12,10 +12,10 @@ const CTOKEN_DECIMALS = 8;
 
 // CToken Params
 const params = {
-  underlying: "0x8A496486f4c7CB840555Bc2Be327CBA1447027C3",
+  underlying: "0x2a0cf46ECaaEAD92487577e9b737Ec63B0208a33",
   irModel: "0xa48a69D8CcDB88AC97b49C6a3F06b62f68d1BF35",
-  name: "PaperDAO Tether USD",
-  symbol: "pUSDT",
+  name: "PaperDAO UniWswap",
+  symbol: "pUNIW",
   decimals: CTOKEN_DECIMALS,
   unitrollerAddr: deployments.Unitroller,
   implementation: delegate,
