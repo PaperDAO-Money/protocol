@@ -12,10 +12,10 @@ const CTOKEN_DECIMALS = 8;
 
 // CToken Params
 const params = {
-  underlying: "0x2a0cf46ECaaEAD92487577e9b737Ec63B0208a33",
+  underlying: "0xFd483e333cBe8fE7A418D9398d6BB81CC2B8e07B",
   irModel: "0xa48a69D8CcDB88AC97b49C6a3F06b62f68d1BF35",
-  name: "PaperDAO UniWswap",
-  symbol: "pUNIW",
+  name: "PaperDAO LfgSwap Finance Token",
+  symbol: "pLFG",
   decimals: CTOKEN_DECIMALS,
   unitrollerAddr: deployments.Unitroller,
   implementation: delegate,
@@ -64,18 +64,18 @@ async function main() {
   writeFileSync(outputFilePath, JSON.stringify(deployments, null, 2));
 
   await cErc20Delegator.deployTransaction.wait(15);
-  await verifyContract(cErc20Delegator.address, [
-    params.underlying,
-    params.unitrollerAddr,
-    params.irModel,
-    initialExcRateMantissaStr,
-    params.name,
-    params.symbol,
-    params.decimals,
-    deployer.address,
-    params.implementation,
-    params.becomeImplementationData,
-  ]);
+  // await verifyContract(cErc20Delegator.address, [
+  //   params.underlying,
+  //   params.unitrollerAddr,
+  //   params.irModel,
+  //   initialExcRateMantissaStr,
+  //   params.name,
+  //   params.symbol,
+  //   params.decimals,
+  //   deployer.address,
+  //   params.implementation,
+  //   params.becomeImplementationData,
+  // ]);
 }
 
 main().catch((error) => {
